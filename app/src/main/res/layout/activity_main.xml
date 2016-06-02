@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v4.widget.DrawerLayout
+    android:id="@+id/dl_main"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <!--左侧菜单-->
+    <FrameLayout
+        android:id="@+id/fl_main_menu"
+        android:layout_gravity="left"
+        android:layout_width="180dp"
+        android:layout_height="match_parent"
+        android:background="@color/colorAccent">
+
+    </FrameLayout>
+
+    <!--content 内容-->
+    <LinearLayout
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        tools:context=".activity.MainActivity">
+
+        <com.astuetz.PagerSlidingTabStrip
+            android:id="@+id/tabs"
+            xmlns:zzw="http://schemas.android.com/apk/res-auto"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            zzw:pstsIndicatorColor="@color/colorPrimary">
+
+        </com.astuetz.PagerSlidingTabStrip>
+
+        <android.support.v4.view.ViewPager
+            android:id="@+id/vp_"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1">
+
+        </android.support.v4.view.ViewPager>
+    </LinearLayout>
+</android.support.v4.widget.DrawerLayout>
